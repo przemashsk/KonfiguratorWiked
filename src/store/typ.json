@@ -1,0 +1,14 @@
+[
+  { "PRODUKTBEREICH": "NORM", "BEZEICHNUNG": "Normal - wszystkie typy konstrukcji", "PRODUKTTYPEN": "10" },
+  { "PRODUKTBEREICH": "PREM", "BEZEICHNUNG": "Premium - wszystkie typy konstrukcji", "PRODUKTTYPEN": "20,21,22,26,27,2020,2021" },
+  { "PRODUKTBEREICH": "OPTI", "BEZEICHNUNG": "Optimum - wszystkie typy konstrukcji", "PRODUKTTYPEN": "30,31,32,36,37" },
+  { "PRODUKTBEREICH": "PRES", "BEZEICHNUNG": "Prestige - wszystkie typy konstrukcji", "PRODUKTTYPEN": "41,46,47" },
+  { "PRODUKTBEREICH": "EXPE", "BEZEICHNUNG": "Expert - wszystkie typy konstrukcji", "PRODUKTTYPEN": "50,51,52,56" },
+  { "PRODUKTBEREICH": "BASIC", "BEZEICHNUNG": "Basic - wszystkie typy konstrukcji", "PRODUKTTYPEN": "610" },
+  { "PRODUKTBEREICH": "HYBR", "BEZEICHNUNG": "Alu Hybrid - wszystkie typy konstrukcji", "PRODUKTTYPEN": "661,666" },
+  { "PRODUKTBEREICH": "DB", "BEZEICHNUNG": "Akustyczne", "PRODUKTTYPEN": "60" },
+  { "PRODUKTBEREICH": "DBRC", "BEZEICHNUNG": "Akustyczne + antywłamaniowe", "PRODUKTTYPEN": "65" },
+  { "PRODUKTBEREICH": "PPDB", "BEZEICHNUNG": "Przeciwpożarowe + akustyczne", "PRODUKTTYPEN": "70" },
+  { "PRODUKTBEREICH": "PPDBR", "BEZEICHNUNG": "Przeciwpożarowe + akustyczne + antywłamaniowe", "PRODUKTTYPEN": "75" },
+  { "PRODUKTBEREICH": "IRON", "BEZEICHNUNG": "Protect IRON", "PRODUKTTYPEN": "80,81,82,83" }
+]

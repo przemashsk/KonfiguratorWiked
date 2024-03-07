@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <style>
+    *{
+      margin: 0;
+padding: 0;
+    }
+    .skrzydlo{
+      position: relative;
+      width: 1110px;
+      height: 2056px;
+    }
+    .skrzydlo > div{
+      position: absolute;
+      left: 0;
+      top: 0;
+
+    }
+    .tloczenie{
+      content: '';
+      background: red;
+      width: 1110px;
+      height: 2056px;
+      background-image: url('https://thumbs.img-sprzedajemy.pl/1000x901c/e3/00/97/blacha-nierdzewna-szlifowana-inox-2x100x300-mm-podkarpackie-zrecin-524671689.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      clip-path: pat\68('M 190 198 h221 v269 h-221 v-269z m 0 279 h221 v269 h-221 v-269z m 0 279 h221 v269 h-221 v-269z m 0 279 h221 v269 h-221 v-269z m 0 279 h221 v269 h-221 v-269z m 0 279 h221 v269 h-221 v-269z');
+      /* clip-path: pat\68('M 0 0 V2056 H1110 V 0 H 0 Z M 190 198 h221 v269 h-221 v-269z m 0 279 h221 v269 h-221 v-269z m 0 279 h221 v269 h-221 v-269z m 0 279 h221 v269 h-221 v-269z m 0 279 h221 v269 h-221 v-269z m 0 279 h221 v269 h-221 v-269z'); */
+    }
+    .okleina{
+      content: '';
+      width: 1110px;
+      height: 2056px;
+      background-image: url('https://wiked.pl/images/konfigurator/okleiny/06.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      /* clip-path: pat\68('M 0 0 V2056 H1110 V 0 H 0 Z M 190 198 h221 v269 h-221 v-269z m 0 279 h221 v269 h-221 v-269z m 0 279 h221 v269 h-221 v-269z m 0 279 h221 v269 h-221 v-269z m 0 279 h221 v269 h-221 v-269z m 0 279 h221 v269 h-221 v-269z'); */
+    }
+  </style>
+</head>
+<body>
+  <div class="skrzydlo">
+    <div class="okleina"></div>
+    <div class="tloczenie"></div>
+  </div>
+</body>
+</html>

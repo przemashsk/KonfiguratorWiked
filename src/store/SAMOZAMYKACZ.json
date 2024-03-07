@@ -1,0 +1,9 @@
+[
+  { "artnr": "-", "bez": "Brak", "SERIA": "10,20,21,22,30,31,32,41,52,60,65,661,610,611," },
+  { "artnr": "W", "bez": "Tylko wzmocnienie pod samozamykacz", "SERIA": "10,20,21,22,30,31,32,41,52,60,65,70,75," },
+  { "artnr": "R", "bez": "Samozamykacz z ramieniem", "SERIA": "10,20,21,22,30,31,32,52,60,65,80,81,82,83," },
+  { "artnr": "RB", "bez": "Samozamykacz z ramieniem i blokadą", "SERIA": "10,20,21,22,30,31,32,52,60,65,80,81,82,83," },
+  { "artnr": "LC", "bez": "Samozamykacz listwowy chowany", "SERIA": "31,41,661,441," },
+  { "artnr": "LN", "bez": "Samozamykacz listwowy nawierzchniowy", "SERIA": "10,20,21,22,30,31,32,41,52,60,65,80,81,82,83," },
+  { "artnr": "RPP", "bez": "Samozamykacz z ramieniem PPOŻ", "SERIA": "60,65,70,75,80,81,82,83," }
+]

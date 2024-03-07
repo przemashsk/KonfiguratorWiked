@@ -1,0 +1,51 @@
+{
+  "name": "vuekonf3",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@fortawesome/free-regular-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "angular-datatables": "^12.0.0",
+    "bootstrap": "^4.5.0",
+    "bootstrap-vue": "^2.14.0",
+    "core-js": "^3.6.5",
+    "datatables.net": "^1.10.21",
+    "datatables.net-buttons": "^1.6.2",
+    "datatables.net-buttons-dt": "^1.6.2",
+    "datatables.net-dt": "^1.10.21",
+    "dns": "file:./src/mock/dns",
+    "express-vue": "^5.16.0",
+    "install": "^0.13.0",
+    "jquery": "^3.5.1",
+    "jspdf": "^2.4.0",
+    "jszip": "^3.7.1",
+    "konva": "^4.2.2",
+    "mssql": "^7.2.1",
+    "ngx-bootstrap": "^5.6.1",
+    "popper.js": "^1.16.1",
+    "volar-service-vetur": "^0.0.31",
+    "vue": "^2.6.11",
+    "vue-data-tables": "^3.4.5",
+    "vue-html2pdf": "^1.8.0",
+    "vue-konva": "^2.1.1",
+    "vue-router": "^3.1.6",
+    "vuex": "^3.3.0",
+    "webpack-jquery-ui": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/datatables.net": "^1.10.19",
+    "@types/datatables.net-buttons": "^1.4.3",
+    "@types/jquery": "^3.3.38",
+    "@vue/cli-plugin-babel": "^4.3.1",
+    "@vue/cli-service": "^4.3.1",
+    "prettier-eslint": "^11.0.0",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.46.0"
+  }
+}

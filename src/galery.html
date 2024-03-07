@@ -1,0 +1,25 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+      
+    </head>
+    <body>
+      <div class="col-md-4">
+        <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="example-gallery">
+          <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid">
+        </a>
+      </div>
+      
+     <script type="text/javascript">
+        $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+            //alert("clicked"); //to test this function ran
+            event.preventDefault();
+            $(this).ekkoLightbox();
+        });
+      </script>
+    </body>
