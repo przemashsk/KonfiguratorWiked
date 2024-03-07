@@ -1,16 +1,14 @@
-// import macierz from "./ceny_json/23011.json";
-import macierz from "./ceny_json/23031.json";
-import bikolor_naswietla from "./ceny_json/bikolor_naswietla.json";
-import SAMOZAMYKACZ_CENA from "./ceny_json/SAMOZAMYKACZ_CENA.JSON";
-import bikolor_drzwi from "./ceny_json/bikolor_drzwi.json";
-import klamkiIpochwyty from "./ceny_json/klamkiIpochwyty.json";
-import klamki from "./klamki.json";
+import macierz from "./JSON/23031.json";
+import bikolor_naswietla from "./JSON/bikolor_naswietla.json";
+import SAMOZAMYKACZ_CENA from "./JSON/SAMOZAMYKACZ_CENA.JSON";
+import bikolor_drzwi from "./JSON/bikolor_drzwi.json";
+import klamkiIpochwyty from "./JSON/klamkiIpochwyty.json";
+import klamki from "./JSON/klamki.json";
 const ceny = {
   state: {
     test: "test",
     // width:1000,
     height: 2100,
-    // cenyna
   },
   actions: {},
   getters: {

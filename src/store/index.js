@@ -1,9 +1,9 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import all from "./dane.js";
-import klamki from "./klamki.json";
-import SAMOZAMYKACZE from "./SAMOZAMYKACZ.json";
-import wzorseria from "./wzor seria.json";
+import klamki from "./JSON/klamki.json";
+import SAMOZAMYKACZE from "./JSON/SAMOZAMYKACZ.json";
+import wzorseria from "./JSON/wzor seria.json";
 import cenymodule from "./cenymodule.js";
 import wymiarymodule from "./wymiarymodule.js";
 import sizecodedimensions from "./sizecodes.js";
