@@ -1,0 +1,8 @@
+{
+    "name": "Nazwa Twojej aplikacji",
+    "short_name": "Skrócona nazwa",
+    "description": "Opis Twojej aplikacji",
+    "theme_color": "#FF0000", // Kolor paska adresu
+    // Pozostałe informacje o twojej aplikacji...
+  }
+  
