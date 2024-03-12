@@ -1137,7 +1137,7 @@ let exportobject = {
   ],
 
   inoxlista: [
-    "RL1",
+    
     "GL1",
     "GL1A",
     "GL2",

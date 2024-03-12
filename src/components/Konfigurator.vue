@@ -579,7 +579,7 @@
             :attr="'inoxstrona'"
             kol5
             :scrollerdata="this.product.szyba == '00' ? inoxstrona.dane : inoxstrona.dane.filter((el) => el.artnr == 0)"
-            v-show="this.product.inoxkolor != '0' && (this.activeModel.typ == 'FI' || showInox || this.activeModel.typ == 'INOX')"
+            v-show="this.product.inoxkolor != '0' && (this.activeModel.typ == 'FI' || this.activeModel.typ == 'RL' || showInox || this.activeModel.typ == 'INOX')"
             label
           ></scroller>
         </div>
