@@ -127,6 +127,7 @@ export default {
       this.drawOkleina2();
     },
     "product.typ": function() {
+      this.drawOkleina();
       this.drawOkleina2();
     },
     "product.baza": function() {
@@ -236,7 +237,7 @@ export default {
         ext = "WEBP";
       }
       okleinaObj.src = `/images/okleiny/${folder}/${kolor}.${ext}`;
-      // console.log(okleinaObj.src);
+      console.log(okleinaObj.src);
       okleinaObj.onload = () => {
         this.okleinaimage = okleinaObj;
       };

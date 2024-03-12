@@ -8,13 +8,6 @@ import cenymodule from "./cenymodule.js";
 import wymiarymodule from "./wymiarymodule.js";
 import sizecodedimensions from "./sizecodes.js";
 
-// import Hotjar from '@hotjar/browser';
-
-// const siteId = 3895702;
-// const hotjarVersion = 6;
-
-// Hotjar.init(siteId, hotjarVersion);
-
 Vue.config.devtools = true;
 Vue.use(Vuex);
 export default new Vuex.Store({
@@ -718,7 +711,7 @@ export default new Vuex.Store({
     backgrounds: [
       //  {url:'/images/backgrounds/1.jpg',x:330,y:312,scalex:0.15,scaley:0.15},
       // { url: "/images/backgrounds/1.jpg", x: 83 * 0.87, y: 149 * 0.87, scalex: 149 * 0.87 / (1025 / 4), scaley: 306 * 0.87 / (2080 / 4) },
-      { url: "/images/backgrounds/1.jpg", x: 456 * 0.87, y: 149 * 0.87, scalex: (152 * 0.87) / (1025 / 4), scaley: (304 * 0.87) / (2080 / 4), dom: true },
+      { url: "/images/backgrounds/1.jpg",width:321, x: 456 * 0.87, y: 149 * 0.87, scalex: (152 * 0.87) / (1025 / 4), scaley: (304 * 0.87) / (2080 / 4), dom: true },
       { url: "/images/backgrounds/4.jpg", x: 400, y: 149, scalex: 108 / (1025 / 4), scaley: 235 / (2080 / 4) },
       { url: "/images/backgrounds/5.jpg", x: 252, y: 38, scalex: 204 / (1025 / 4), scaley: 407 / (2080 / 4) },
       { url: "/images/backgrounds/6.jpg", x: 309, y: 154, scalex: 90 / (1025 / 4), scaley: 189 / (2080 / 4) },
@@ -729,7 +722,7 @@ export default new Vuex.Store({
     // activebackground: { url: "/images/backgrounds/5.jpg", x: 252, y: 38, scalex: 204 / (1025 / 4), scaley: 407 / (2080 / 4) },
     // activebackground: { url: "/images/backgrounds/1.jpg", x: 83 * 0.87, y: 149 * 0.87, scalex: 149 * 0.87 / (1025 / 4), scaley: 306 * 0.87 / (2080 / 4) },
     // activebackground: { url: "/images/backgrounds/1.jpg", x: 158 * 0.87, y: 8 * 0.87, scalex: 149 * 0.87 / (1025 / 4), scaley: 306 * 0.87 / (2080 / 4) },
-    activebackground: { url: "/images/backgrounds/1.jpg", x: 83 * 0.87, y: 149 * 0.87, scalex: (287 * 0.87) / (1025 / 4), scaley: (584 * 0.87) / (2080 / 4) },
+    activebackground: { url: "/images/backgrounds/1.jpg", width:123 ,x: 83 * 0.87, y: 149 * 0.87, scalex: (287 * 0.87) / (1025 / 4), scaley: (584 * 0.87) / (2080 / 4) },
     exportImageObj: null,
     exportImageObjInner: null,
     custombackgroundimg: null,
@@ -759,6 +752,7 @@ export default new Vuex.Store({
       // state.product.seria = 23;
     },
     setActiveBackground(state, payload) {
+      // console.log(payload)
       state.activebackground = payload;
     },
     setNextTab(state) {
@@ -957,14 +951,14 @@ export default new Vuex.Store({
         filtered = state.kolor.dane.filter((el) => el.typ == 'DEK')
       }
       let zakazaneKolory = state.zakazane.find((el) => el.model == wzor);
-      console.log(state.zakazane);
-      console.log(zakazaneKolory);
+      // console.log(state.zakazane);
+      // console.log(zakazaneKolory);
       let kolor = state.product.kolor;
       let szyba = state.product.szyba;
       let k = state.kolor.dane.find((el) => el.artnr == kolor).bez;
-      console.log("kolor: " + kolor);
-      console.log("wzor: " + wzor);
-      console.log("szyba: " + szyba);
+      // console.log("kolor: " + kolor);
+      // console.log("wzor: " + wzor);
+      // console.log("szyba: " + szyba);
       if (szyba != "00" && zakazaneKolory) {
         filtered = filtered.filter((el) => !zakazaneKolory.zakazaneKolory.includes(el.artnr));
       }

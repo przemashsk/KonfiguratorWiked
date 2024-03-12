@@ -331,7 +331,7 @@ let exportobject = {
     { artnr: "FD", bez: "FI13", typ: "FI", odpszyb: "FD", odpszybkonf: "FD", kolor: "16", sposobotw: "KP", klamka: "Pock20", klamkakolor: "10304", inoxkolor: "10304", rozeta: "RozPiersc", szyba2: "m" },
     // { artnr: "FE", bez: "FI14", typ: "FI", odpszyb: "FE", odpszybkonf: "FE" ,nowosc:true,kolor:'14',sposobotw: "KK",klamka:'Tahoma',klamkakolor: "10304",inoxkolor:"10304",seria:'22'},
     { artnr: "FE", bez: "FI15", typ: "FI", odpszyb: "FE", odpszybkonf: "FE", kolor: "14", sposobotw: "KP", klamka: "P050SPI90B", klamkakolor: "10304", inoxkolor: "10304", seria: "41", rozeta: "RozPiersc" },
-    { nowosc: true, artnr: "FF", bez: "FI15", typ: "FI", odpszyb: "FB", odpszybkonf: "FB", kolor: "17", sposobotw: "KP", klamka: "P120SZ90BL", klamkakolor: "ZywCDZlot", inoxkolor: "10304", seria: "41", rozeta: "RozPiersc" },
+    { nowosc: true, artnr: "FF", bez: "FI15", typ: "FI", odpszyb: "FB", odpszybkonf: "FB", kolor: "17", sposobotw: "KP", klamka: "P150SZ90BL", klamkakolor: "ZywOENieb", inoxkolor: "10304", seria: "31" },
     { artnr: "F1A", bez: "FI01A", typ: "FI", odpszyb: "FI01A", odpszybkonf: "FI01A", kolor: "17", sposobotw: "KP", klamka: "P150o90", klamkakolor: "10304", mixz: "16", wariant: "M", inoxkolor: "10304" },
     { artnr: "F1B", bez: "FI01B", typ: "FI", odpszyb: "FI01B", odpszybkonf: "FI01B", kolor: "01", sposobotw: "KK", klamka: "Manitoba", klamkakolor: "10301", mixz: "03", wariant: "M", inoxkolor: "10301", seria: "22" },
     { artnr: "F1C", bez: "FI01C", typ: "FI", odpszyb: "FI01C", odpszybkonf: "FI01C", kolor: "14", sposobotw: "KK", klamka: "Manitoba", klamkakolor: "10301", mixz: "17", wariant: "M", inoxkolor: "10301", seria: "22" },
@@ -370,7 +370,7 @@ let exportobject = {
 
     { artnr: "3D1", bez: "3D1", typ: "3D", odpszyb: "51", odpszybkonf: "51", kolor: "C010", kolor2: "C010", kolor5: "13", kolor6: "13", kolor7: "13", sposobotw: "KP", klamka: "P180p", klamkakolor: "10304", wariant: "B" , rozeta: "RozPiersc"},
     { artnr: "3D2", bez: "3D2", typ: "3D", odpszyb: "52", odpszybkonf: "52", kolor: "C012", kolor2: "C012", kolor5: "13", kolor6: "13", kolor7: "zloty", sposobotw: "KP", klamka: "P120p90", klamkakolor: "10335", wariant: "B" },
-    { nowosc: true, artnr: "3D3", bez: "3D03", typ: "3D", odpszyb: "52", odpszybkonf: "52", kolor: "T6021",kolor2:"T6021", kolor7: "13", sposobotw: "KP", klamka: "P120SZ90BL", klamkakolor: "ZywCDZlot", seria: 31 ,klamkaWew:"SlimSolo"},
+    { nowosc: true, artnr: "3D3", bez: "3D03", typ: "3D", odpszyb: "52", odpszybkonf: "52", kolor: "T6021", kolor7: "13", sposobotw: "KP", klamka: "P150SZ90BL", klamkakolor: "ZywCDZlot", seria: 31 ,klamkaWew:"SlimSolo"},
     { nowosc: true, artnr: "3D4", bez: "3D04", typ: "3D", odpszyb: "52", odpszybkonf: "52", kolor: "T8001", kolor7: "01", sposobotw: "KP", klamka: "P120p90", klamkakolor: "10304" ,seria:31,klamkaWew:"SlimSolo"},
 
     { nowosc: true, artnr: "S1", bez: "S1", typ: "SL", odpszyb: "FI08B", odpszybkonf: "S1", kolor: "C015", sposobotw: "KK", klamka: "Lava2s", klamkakolor: "10335" },

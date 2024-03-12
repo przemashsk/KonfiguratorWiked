@@ -114,17 +114,15 @@ export default {
   },
   mounted() {
     let self = this;
-    window.addEventListener("scroll", function() {
-      // console.log(window.scrollY);
+    // window.addEventListener("scroll", function() {
 
-      if (window.scrollY > 300) {
-        self.fixed = false;
-      } else if (window.scrollY < 100) {
-        // console.log('mniej niż 100');
+    //   if (window.scrollY > 300) {
+    //     self.fixed = false;
+    //   } else if (window.scrollY < 100) {
 
-        self.fixed = false;
-      }
-    });
+    //     self.fixed = false;
+    //   }
+    // });
   },
 };
 </script>

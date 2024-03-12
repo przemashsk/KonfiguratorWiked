@@ -705,10 +705,12 @@ export default {
       if (this.activeModel.typ == "GL" && this.selectedwidok == "W") {
         file = "wew/" + file;
       }
+
       if (this.product.inoxkolor == "10304") {
-        if (this.product.wzor.substring(0, 2) == "RL" && this.product.kolor.length > 2) {
-        } else {
-          file += "_black";
+        if (this.product.wzor.substring(0, 2) == "RL") {
+          if((this.selectedwidok == "Z" && this.product.kolor.length == 2)||(this.selectedwidok == "W" && this.product.kolor2.length == 2)){
+            file += "_black";
+          }
         }
       }
       if (this.product.inoxkolor == "1") {

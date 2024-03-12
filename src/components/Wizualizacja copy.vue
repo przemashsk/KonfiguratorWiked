@@ -71,11 +71,11 @@ export default {
     }
   },
   created() {
-    window.addEventListener("scroll", this.handleScroll);
-    if (document.getElementById("content")) {
-      document.getElementById("content").style.marginTop = "10px";
-      document.getElementById("content").style.paddingTop = "10px";
-    }
+    // window.addEventListener("scroll", this.handleScroll);
+    // if (document.getElementById("content")) {
+    //   document.getElementById("content").style.marginTop = "10px";
+    //   document.getElementById("content").style.paddingTop = "10px";
+    // }
   },
   mounted() {
     this.fadeIn();

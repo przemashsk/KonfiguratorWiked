@@ -131,7 +131,7 @@
       </div>
     </div>
     <transition-group name="test" tag="div" v-show="activeTab != 'Podsumowanie'" class="p-4 q o dafid">
-      <div id="Inspiracja" :key="'sasa'" class="" v-show="activeTab == 'Inspiracje'" v-if="product.protect == 'blok'">
+      <div id="Inspiracja" :key="'sasa'" class="" v-if="activeTab == 'Inspiracje' && product.protect == 'blok'">
         <div class="wiersz2 mb-3">
           <div class="item" :class="product.inspiracjanr == 'P6' ? 'active' : ''"><img src="images/konfigurator/konf ins/PROTECTy inspiracje/nowe/1.png" alt="" @click="product.inspiracjanr = 'P6'" /></div>
           <div class="item" :class="product.inspiracjanr == 'P5' ? 'active' : ''"><img src="images/konfigurator/konf ins/PROTECTy inspiracje/Protect 43a.jpg" alt="" @click="product.inspiracjanr = 'P5'" /></div>
@@ -146,7 +146,7 @@
           <div class="item" :class="product.inspiracjanr == 'P3' ? 'active' : ''"><img src="images/konfigurator/konf ins/PROTECTy inspiracje/Protect 1 z lamelami.jpg" alt="" @click="product.inspiracjanr = 'P3'" /></div>
         </div>
       </div>
-      <div id="Inspiracja" :key="'sasaa'" class="" v-show="activeTab == 'Inspiracje'" v-else>
+      <div id="Inspiracja" :key="'sasaa'" class="" v-show="activeTab == 'Inspiracje' && product.protect == 'blok'" v-else>
         <div class="galeria2">
           <!-- bestsellery -->
           <div id="bestsellery" class="galeria" v-show="product.filtryinspiracjeitem == 'wszystkie' || product.filtryinspiracjeitem == 'bestsellery'">
@@ -939,7 +939,7 @@ export default {
           this.product.klamkakolor = wzory.filter((el) => el.artnr === this.product.wzor)[0]?.klamkakolor || this.klamkakolorfilter[0].artnr;
           this.product.inoxkolor = wzory.filter((el) => el.artnr === this.product.wzor)[0]?.inoxkolor || this.$store.getters.ramkakolorfilter[0].artnr;
           this.product.rozeta = wzory.filter((el) => el.artnr === this.product.wzor)[0]?.rozeta || "SlimSoloX";
-          console.log(this.product.rozeta);
+          // console.log(this.product.rozeta);
           if (this.product.rozeta == "RozPiersc") {
             this.product.klamkaWew = "Lava";
           } else {
@@ -984,7 +984,7 @@ export default {
       }
     },
     "product.seria": function(newval, val) {
-      const seria = parseInt(this.product.seria);
+      // const seria = parseInt(this.product.seria);
       if(seria==23){
         this.product.sposobotw = "KK";
         this.product.wariant="S"
@@ -1176,12 +1176,12 @@ export default {
       //   }
     },
     "product.klamkaWew": function() {
-      console.log(this.rozetyFilter);
+      // console.log(this.rozetyFilter);
       this.product.rozeta = this.rozetyFilter[0].artnr;
-      console.log(this.product.rozeta);
+      // console.log(this.product.rozeta);
     },
     "product.kolor1typ": function() {
-      if(product.wariant=='S'){
+      if(this.product.wariant=='S'){
         this.product.kolor2typ=this.product.kolor1typ
       }
     },
@@ -1192,11 +1192,13 @@ export default {
     "product.kolor6typ": function() {},
     "product.kolor7typ": function() {},
     "product.kolor": function(newval, val) {
+      let kolor = newval;
+      console.log(newval)
       if (this.product.wariant == "S") {
-            this.product.kolor2 = this.product.kolor;
-            this.product.kolor5 = this.product.kolor;
-            this.product.kolor6 = this.product.kolor;
-            this.product.kolor7 = this.product.kolor;
+            this.product.kolor2 = kolor;
+            this.product.kolor5 = kolor;
+            this.product.kolor6 = kolor;
+            this.product.kolor7 = kolor;
           }
       // const zakazane = [
       //   { model: "03", zakazaneKolory: ["18", "14", "15", "13", "16"] },
@@ -1207,7 +1209,6 @@ export default {
       //   { model: "34", zakazaneKolory: ["13"] },
       //   { model: "42", zakazaneKolory: ["13"] },
       // ];
-      let kolor = this.product.kolor;
       // let wzor = this.product.wzor;
       // let szyba = this.product.szyba;
       // let k = this.kolor.dane.find((el) => el.artnr == kolor).bez;
