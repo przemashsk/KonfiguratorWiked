@@ -329,10 +329,10 @@ const ceny = {
         PREIS = "PREIS2";
       }
       if (wzor.substring(0, 1) == "S") {
-        console.log(kolor1typ)
-        console.log(kolor2typ)
-        console.log(kolor)
-        console.log(kolor2)
+        // console.log(kolor1typ)
+        // console.log(kolor2typ)
+        // console.log(kolor)
+        // console.log(kolor2)
         if ([kolor1typ, kolor2typ].includes("SKY")) {
           PREIS = "PREIS2";
         } else {
@@ -445,25 +445,25 @@ const ceny = {
       return output;
     },
     CenaPochwyt: (state, getters, rootState) => {
-      // const klamki = rootState.klamki.dane;
-      if (rootState.product.sposobotw == "KK" || rootState.product.sposobotw == "KG") return;
+      const sposobotw = rootState.product.sposobotw;
+      let seriac = parseInt(getters.seriac);
+      if (sposobotw == "KK" || sposobotw == "KG") return;
       if (getters.activeKlamka.typ == "KK" || getters.activeKlamka.typ == "KG") return;
       let output = 0;
       let litera = "";
       let KOD = getters.activeKlamka.KOD || "BRAK";
       let strona = rootState.product.kierunek.substring(0, 1);
-      if (getters.seriac == 20) {
+      if ([20,22].includes(seriac)) {
         litera = "D";
-      } else if (getters.seriac == 30) {
+      } else if ([30,32].includes(seriac)) {
         litera = "B";
-      } else if (getters.seriac == 41 || getters.seriac == 661) {
+      } else if ([41,661].includes(seriac)) {
         litera = "C";
         // } else if (getters.seriac == 60) {
         //   litera = "F";
-      } else if (getters.seriac == 60 || getters.seriac == 70) {
+      } else if ([60,70].includes(seriac)){
         litera = "G";
       }
-      let seriac = parseInt(getters.seriac);
       let seria = parseInt(rootState.product.seria);
 
       if (rootState.product.sposobotw == "KP") {
@@ -521,9 +521,9 @@ const ceny = {
       let litera = "";
       let KOD = getters.activeKlamka.KOD || "BRAK";
       let strona = rootState.product.kierunek.substring(0, 1);
-      if (seriac == 20) {
+      if ([20,22].includes(seriac)) {
         litera = "D";
-      } else if (seriac == 30) {
+      } else if ([30,32].includes(seriac)) {
         litera = "B";
       } else if ([41, 661].includes(seriac)) {
         litera = "C";
@@ -539,9 +539,13 @@ const ceny = {
       let ARTNR = getters.activeKlamka.KOD + litera;
 
       KOD = klamki.find((el) => el.artnr == klamkaWew).KOD;
-      ARTNR = KOD + litera.substr(0, 1);
+      // ARTNR = KOD + litera.substr(0, 1);
+      ARTNR = KOD + litera;
+      // console.log(litera);
+      // console.log(seriac);
       // console.log(ARTNR);
       // console.log(pole);
+      // console.log(klamkiIpochwyty.find((el) => el.ARTNR == ARTNR && el.PREISFELDNR == pole))
       return klamkiIpochwyty.find((el) => el.ARTNR == ARTNR && el.PREISFELDNR == pole).WERT || 0;
     },
     DEERSTONE: (state, getters, rootState) => {

@@ -1541,10 +1541,10 @@ export default new Vuex.Store({
       if ((getters.activeModel.typ == "PCV" && state.product.szyba != "00") || getters.activeModel.artnr == "29") {
         filtered = filtered.filter((el) => el.artnr != "14");
       }
-
-      if (state.product.seria.indexOf("1") == -1 || (getters.activeModel.typ == "PCV" && state.product.szyba != "00")) {
-        filtered = filtered.filter((el) => el.artnr != "11").filter((el) => el.artnr != "13");
-      }
+// console.log(state.product.seria)
+      // if (state.product.seria.indexOf("1") == -1 || (getters.activeModel.typ == "PCV" && state.product.szyba != "00")) {
+      //   filtered = filtered.filter((el) => el.artnr != "11").filter((el) => el.artnr != "13");
+      // }
 
       if (state.product.seria != "41" && state.product.seria != "31" && state.product.seria != "21") {
         filtered = filtered.filter((el) => el.artnr != "12");

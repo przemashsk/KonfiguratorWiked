@@ -984,7 +984,7 @@ export default {
       }
     },
     "product.seria": function(newval, val) {
-      // const seria = parseInt(this.product.seria);
+      const seria = parseInt(this.product.seria);
       if(seria==23){
         this.product.sposobotw = "KK";
         this.product.wariant="S"
@@ -1023,7 +1023,8 @@ export default {
       }
       if ([22, 32].includes(seria)) {
         // this.product.kolor = "03";
-        this.product.kolor = this.kolorFilter6[0].artnr;
+        // this.product.kolor = this.kolorFilter6[0].artnr;
+        // wtf?
       }
       if (this.CenaOkucia == 99999) {
         console.log("99999");
@@ -1075,6 +1076,7 @@ export default {
       }
       if (this.zmianaWzoru == false) {
         if (["PP", "KP"].indexOf(this.product.sposobotw) > -1 && this.zmianaInspiracji == false) {
+          
           this.product.pochwyty = this.pochwytyfilter[0].artnr || "";
           this.product.klamkakolor = this.klamkakolorfilter[0].artnr;
         } else {
