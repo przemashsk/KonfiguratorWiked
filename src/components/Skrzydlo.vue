@@ -1071,6 +1071,7 @@ export default {
     },
 
     drawTloczenie: function () {
+    // console.log('ertyui')
       const wzor = this.product.wzor;
       this.tloczenieimage = null;
       const imageObj = new Image();
@@ -1107,6 +1108,8 @@ export default {
           if ((this.product.inoxstrona == 2 && this.selectedwidok == "W")||(this.product.inoxstrona == 1 && this.selectedwidok == "Z")) {
             file = "01_00";
           }
+        }else{
+          file += "_black";
         }
       }
       if (this.product.inoxkolor == "1") {
@@ -1123,7 +1126,7 @@ export default {
         if (this.tloczeniepcv == true) {
           file = this.product.wzor + "_00";
           if (this.product.inoxkolor == "10304") {
-            // file += "_black";
+            file += "_black";
           }
         }
       }
@@ -1161,7 +1164,7 @@ export default {
         this.tloczenieimage = imageObj;
       };
 
-      // console.log(imageObj.src);
+      console.log(imageObj.src);
     },
 
     drawAutomatyka: function () {
