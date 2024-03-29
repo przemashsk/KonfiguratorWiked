@@ -91,7 +91,7 @@ const ceny = {
       let ceny = rootState.szyba2.dane;
       let cena = ceny.find((el) => el.artnr == szyba2).cena || 0;
       let cena2 = 0;
-      if (["b", "g"].indexOf(szyba2) > -1 && seria != 21) {
+      if (["b", "g","bl"].indexOf(szyba2) > -1 && seria != 21) {
         cena = ceny.find((el) => el.artnr == szyba2).cena2 || 0;
       }
 
