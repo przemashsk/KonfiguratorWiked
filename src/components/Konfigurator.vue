@@ -146,7 +146,7 @@
           <div class="item" :class="product.inspiracjanr == 'P3' ? 'active' : ''"><img src="images/konfigurator/konf ins/PROTECTy inspiracje/Protect 1 z lamelami.jpg" alt="" @click="product.inspiracjanr = 'P3'" /></div>
         </div>
       </div>
-      <div id="Inspiracja" :key="'sasaa'" class="" v-show="activeTab == 'Inspiracje' && product.protect == 'blok'" v-else>
+      <div id="Inspiracja" :key="'sasaa'" class="" v-show="activeTab == 'Inspiracje' && product.protect == 'dom'" v-else>
         <div class="galeria2">
           <!-- bestsellery -->
           <div id="bestsellery" class="galeria" v-show="product.filtryinspiracjeitem == 'wszystkie' || product.filtryinspiracjeitem == 'bestsellery'">
