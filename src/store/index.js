@@ -712,7 +712,7 @@ export default new Vuex.Store({
     backgrounds: [
       //  {url:'/images/backgrounds/1.jpg',x:330,y:312,scalex:0.15,scaley:0.15},
       // { url: "/images/backgrounds/1.jpg", x: 83 * 0.87, y: 149 * 0.87, scalex: 149 * 0.87 / (1025 / 4), scaley: 306 * 0.87 / (2080 / 4) },
-      { url: "/images/backgrounds/1.jpg",width:321, x: 456 * 0.87, y: 149 * 0.87, scalex: (152 * 0.87) / (1025 / 4), scaley: (304 * 0.87) / (2080 / 4), dom: true },
+      { url: "/images/backgrounds/1.jpg", width: 321, x: 456 * 0.87, y: 149 * 0.87, scalex: (152 * 0.87) / (1025 / 4), scaley: (304 * 0.87) / (2080 / 4), dom: true },
       { url: "/images/backgrounds/4.jpg", x: 400, y: 149, scalex: 108 / (1025 / 4), scaley: 235 / (2080 / 4) },
       { url: "/images/backgrounds/5.jpg", x: 252, y: 38, scalex: 204 / (1025 / 4), scaley: 407 / (2080 / 4) },
       { url: "/images/backgrounds/6.jpg", x: 309, y: 154, scalex: 90 / (1025 / 4), scaley: 189 / (2080 / 4) },
@@ -723,7 +723,7 @@ export default new Vuex.Store({
     // activebackground: { url: "/images/backgrounds/5.jpg", x: 252, y: 38, scalex: 204 / (1025 / 4), scaley: 407 / (2080 / 4) },
     // activebackground: { url: "/images/backgrounds/1.jpg", x: 83 * 0.87, y: 149 * 0.87, scalex: 149 * 0.87 / (1025 / 4), scaley: 306 * 0.87 / (2080 / 4) },
     // activebackground: { url: "/images/backgrounds/1.jpg", x: 158 * 0.87, y: 8 * 0.87, scalex: 149 * 0.87 / (1025 / 4), scaley: 306 * 0.87 / (2080 / 4) },
-    activebackground: { url: "/images/backgrounds/1.jpg", width:123 ,x: 83 * 0.87, y: 149 * 0.87, scalex: (287 * 0.87) / (1025 / 4), scaley: (584 * 0.87) / (2080 / 4) },
+    activebackground: { url: "/images/backgrounds/1.jpg", width: 123, x: 83 * 0.87, y: 149 * 0.87, scalex: (287 * 0.87) / (1025 / 4), scaley: (584 * 0.87) / (2080 / 4) },
     exportImageObj: null,
     exportImageObjInner: null,
     custombackgroundimg: null,
@@ -941,15 +941,15 @@ export default new Vuex.Store({
     },
     kolorFilter: (state, getters) => {
       const seria = parseInt(state.product.seria);
-      if(seria==23){
-        return state.kolor.dane.filter((el) => el.typ == 'DEK' && ['03','04','06','07','14'].includes(el.artnr));
+      if (seria == 23) {
+        return state.kolor.dane.filter((el) => el.typ == "DEK" && ["03", "04", "06", "07", "14"].includes(el.artnr));
       }
-      
+
       let wzor = state.product.wzor;
       // let filtered = state.kolor.dane.filter((el) => el.typ == state.product.kolor1typ);
       let filtered = state.kolor.dane.filter((el) => el.typ == state.product.activeKolorTyp);
-      if(getters.activeModel.typ == "FI"){
-        filtered = state.kolor.dane.filter((el) => el.typ == 'DEK')
+      if (getters.activeModel.typ == "FI") {
+        filtered = state.kolor.dane.filter((el) => el.typ == "DEK");
       }
       let zakazaneKolory = state.zakazane.find((el) => el.model == wzor);
       // console.log(state.zakazane);
@@ -989,8 +989,8 @@ export default new Vuex.Store({
     kolorFilter2: (state, getters) => {
       // let filtered = state.kolor.dane.filter((el) => el.typ == state.product.kolor2typ);
       let filtered = state.kolor.dane.filter((el) => el.typ == state.product.activeKolor2Typ);
-      if(getters.activeModel.typ == "FI"){
-        filtered = state.kolor.dane.filter((el) => el.typ == 'DEK')
+      if (getters.activeModel.typ == "FI") {
+        filtered = state.kolor.dane.filter((el) => el.typ == "DEK");
       }
       if (state.product.szyba != "00" && getters.activeModel.typ == "PCV") {
         filtered = filtered.filter((el) => el.artnr != "17").filter((el) => el.artnr != "05");
@@ -1542,7 +1542,7 @@ export default new Vuex.Store({
       if ((getters.activeModel.typ == "PCV" && state.product.szyba != "00") || getters.activeModel.artnr == "29") {
         filtered = filtered.filter((el) => el.artnr != "14");
       }
-// console.log(state.product.seria)
+      // console.log(state.product.seria)
       // if (state.product.seria.indexOf("1") == -1 || (getters.activeModel.typ == "PCV" && state.product.szyba != "00")) {
       //   filtered = filtered.filter((el) => el.artnr != "11").filter((el) => el.artnr != "13");
       // }
@@ -1763,7 +1763,7 @@ export default new Vuex.Store({
     },
     wariantFilter2: (state) => {
       // if (state.seriac == "60" || state.product.plus=='tak') {
-      if (state.seriac == "60" ) {
+      if (state.seriac == "60") {
         return state.kolortyp.dane.filter((el) => el.artnr == "S");
       } else {
         return state.mixkolorlista.indexOf(state.product.wzor) == -1 ? state.wariant.dane.slice(0, 2) : state.wariant.dane.filter((el) => el.artnr != "B");
@@ -1773,7 +1773,7 @@ export default new Vuex.Store({
       const seria = parseInt(state.product.seria);
       const wzor = state.product.wzor;
       const typ = getters.activeModel.typ;
-      if(seria==23){
+      if (seria == 23) {
         return state.kolortyp.dane.filter((el) => el.artnr == "DEK");
       }
       if (typ == "SL") {
@@ -1797,14 +1797,14 @@ export default new Vuex.Store({
     kolor3typFilter: (state, getters) => {
       const typ = getters.activeModel.typ;
       const szyba = state.product.szyba;
-      if(typ == 'PCV' && szyba!='-'){
+      if (typ == "PCV" && szyba != "-") {
         return state.kolortyp.dane.filter((el) => el.artnr == "DEK");
       }
       if (typ == "SL") {
         state.product.activeKolor3Typ = "RAL";
         return state.kolortyp.dane.filter((el) => el.artnr != "DEK");
       }
-      if (typ == '3D') {
+      if (typ == "3D") {
         return state.kolortyp.dane.filter((el) => el.artnr != "DEK");
       } else {
         return state.kolortyp.dane;
@@ -2029,7 +2029,7 @@ export default new Vuex.Store({
     },
     szybyFilter: (state, getters) => {
       let wzor = state.product.wzor;
-      if (state.product.plus == "tak" && ['12','42'].includes(wzor)) {
+      if (state.product.plus == "tak" && ["12", "42"].includes(wzor)) {
         return state.szyba.dane.filter((el) => el.artnr == "33");
       }
       if (wzor == "43") {
@@ -2078,8 +2078,8 @@ export default new Vuex.Store({
     },
     sposobotwfilter: (state, getters) => {
       const seria = parseInt(state.product.seria);
-      if(seria==23){
-        return state.sposobotw.dane.filter((el) =>el.artnr=='KK')
+      if (seria == 23) {
+        return state.sposobotw.dane.filter((el) => el.artnr == "KK");
       }
       let wzor = state.product.wzor;
       let dostepne_okucia = klamki.filter(
@@ -2387,7 +2387,7 @@ export default new Vuex.Store({
       let dlugoscip = state.product.dlugosci;
       let kat = state.product.kat;
       let so = "Z,W";
-      if (sposobotw == "KP" || sposobotw == "KG" || sposobotw == "GP" ) {
+      if (sposobotw == "KP" || sposobotw == "KG" || sposobotw == "GP") {
         so = "Z";
       }
 
@@ -2408,26 +2408,38 @@ export default new Vuex.Store({
             el.WZORY.indexOf("-") > -1) &&
           el.PRODUKTTYP.indexOf(seria) > -1
       );
-      if(klamkakolor.length>5){
-        klamkakolor='10304'
+      if (klamkakolor.length > 5) {
+        klamkakolor = "10304";
       }
       state.dostepne_okucia = dostepne_okucia.filter((el) => el.SO == "W" && el.TYP == "K" && el.KOLORY_KLAMEK.includes(klamkakolor));
 
       filtered = filtered.filter((el) => el.ZABLOKOWANE.indexOf(wzor) == -1 || el.ZABLOKOWANE == "-");
       // filtered=filtered.filter((el) => el.PRODUKTTYP.indexOf(seria.toString())> -1 && el.KOLORY_KLAMEK.indexOf(klamkakolor)>-1)
-      filtered = filtered.filter(
-        (el) =>
-          el.PRODUKTTYP.trim()
-            .split(",")
-            .indexOf(seria) > -1 && el.KOLORY_KLAMEK.indexOf(klamkakolor) > -1
-      );
+      // filtered = filtered.filter(
+      //   (el) =>
+      //     el.PRODUKTTYP.trim()
+      //       .split(",")
+      //       .indexOf(seria) > -1 && el.KOLORY_KLAMEK.indexOf(klamkakolor) > -1
+      // );
       // console.log(filtered)
       if (klamkakolor == "10304") {
         filtered.filter((el) => el.artnr != "Prestige");
       }
       if (sposobotw == "KP" || sposobotw == "PP") {
         const dlugosci = [];
-        filtered = filtered.filter((el) => el.GRUPA == pochwyty && el.dlugosc == dlugoscip && el.kat == kat && el.opcjepochwytu == opcjepochwytu && el.led == led);
+        console.table(filtered);
+        console.log(pochwyty);
+        console.log(klamkakolor);
+        filtered = filtered.filter((el) => el.GRUPA == pochwyty);
+        console.table(filtered);
+        filtered = filtered.filter((el) => el.dlugosc == dlugoscip);
+        console.table(filtered);
+        filtered = filtered.filter((el) => el.kat == kat);
+        console.table(filtered);
+        filtered = filtered.filter((el) => el.opcjepochwytu == opcjepochwytu );
+        console.table(filtered);
+        filtered = filtered.filter((el) => el.led == led);
+        console.table(filtered);
       }
 
       return filtered.length > 0 ? filtered : [{ artnr: "-", bez: "Brak" }];
@@ -2572,7 +2584,7 @@ export default new Vuex.Store({
       } else if (state.product.plus == "tak") {
         serie = state.seria.dane.filter((el) => [23].includes(parseInt(el.artnr)));
       } else {
-        serie = state.seria.dane.filter((el) => ![23,60, 65, 70, 75, 80, 81, 82, 83].includes(parseInt(el.artnr)));
+        serie = state.seria.dane.filter((el) => ![23, 60, 65, 70, 75, 80, 81, 82, 83].includes(parseInt(el.artnr)));
       }
       const serieDoWzoru = wzorseria
         .filter((el) => el.ArtNr == wzor)[0]
@@ -2625,8 +2637,8 @@ export default new Vuex.Store({
       // }
     },
     wzorFilter: (state, getters) => {
-      if(state.product.plus=='tak'){
-        return state.wzor.dane.filter((el)=>['01','26C','12','42'].includes(el.artnr))
+      if (state.product.plus == "tak") {
+        return state.wzor.dane.filter((el) => ["01", "26C", "12", "42"].includes(el.artnr));
       }
       // console.log(wzorseria.filter((el)=>el.ArtNr=='GF6'))
       let wzoryfilter = [];
@@ -2790,7 +2802,7 @@ export default new Vuex.Store({
       }
     },
     seriac: (state) => {
-      const seria = parseInt(state.product.seria)
+      const seria = parseInt(state.product.seria);
       if (state.product.seria == "60") {
         if (["rw", "rwrc3"].indexOf(state.product.opcja) > -1) {
           return "60";
@@ -2800,7 +2812,7 @@ export default new Vuex.Store({
       }
 
       // if(['rw','rwrc3'].indexOf(state.product.opcja)>0)
-      if ([20,21,23].includes(seria)) {
+      if ([20, 21, 23].includes(seria)) {
         return "20";
       } else if (state.product.seria == "31" || state.product.seria == "32") {
         return "30";
