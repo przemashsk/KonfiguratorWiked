@@ -1,8 +1,8 @@
 [
-  { "ARTNR": "LC", "WERT": 1250, "CZARNY": 1250 },
-  { "ARTNR": "LN", "WERT": 1050, "CZARNY": 1100 },
-  { "ARTNR": "R", "WERT": 380, "CZARNY": 410 },
-  { "ARTNR": "RB", "WERT": 570, "CZARNY": 610 },
-  { "ARTNR": "RPP", "WERT": 380 },
-  { "ARTNR": "W", "WERT": 100 }
+  { "ARTNR": "LC", "WERT": 1320 },
+  { "ARTNR": "LN", "WERT": 1110, "CZARNY": 1160 },
+  { "ARTNR": "R", "WERT": 400, "CZARNY": 440 },
+  { "ARTNR": "RB", "WERT": 600, "CZARNY": 650 },
+  { "ARTNR": "RPP", "WERT": 400 },
+  { "ARTNR": "W", "WERT": 110 }
 ]

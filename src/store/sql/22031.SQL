@@ -15,7 +15,7 @@ select
 from
     PREISMAT
 where
-    NUMMER = 23031
+    NUMMER = 24011
     and LEFT(PREISMATRIX, 6) = 'DRZWI_'
     AND NOT PREISMATRIX IN('DRZWI_SN', 'DRZWI_RN', 'DRZWI_LP')
     AND BREITE < 9999

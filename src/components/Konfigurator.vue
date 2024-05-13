@@ -984,6 +984,12 @@ export default {
       }
     },
     "product.seria": function(newval, val) {
+      console.log(this.product.kolor)
+      console.table(this.kolorFilter)
+      if(!this.kolorFilter.find((el)=>el.artnr==this.kolorFilter)){
+        console.log('Brak koloru w filtrze kolorów')
+        // this.product.kolor = this.kolorFilter[0].artnr
+      }
       const seria = parseInt(this.product.seria);
       if(seria==23){
         this.product.sposobotw = "KK";

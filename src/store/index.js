@@ -98,12 +98,12 @@ export default new Vuex.Store({
     automatyczneZasuwnice: {
       dane: [
         { artnr: "-", bez: "Brak", serie: "-", cena: 0 },
-        { artnr: "A", bez: "Automatic", serie: "41", cena: 2180, opis: "W skład zestawu wchodzą zamek automatyczny z napędem elektrycznym, odpowiednie okablowanie. Dostępne tylko dla linii Termo Prestige Lux, nie wymaga stosowania elektrozaczepów, w standardzie zasuwnica automatyczna." },
+        { artnr: "A", bez: "Automatic", serie: "41", cena: 2290, opis: "W skład zestawu wchodzą zamek automatyczny z napędem elektrycznym, odpowiednie okablowanie. Dostępne tylko dla linii Termo Prestige Lux, nie wymaga stosowania elektrozaczepów, w standardzie zasuwnica automatyczna." },
         {
           artnr: "E",
           bez: "Elektromotoryczna",
           serie: "41,661",
-          cena: 2700,
+          cena: 2840,
           opis: "W skład zestawu wchodzą zamek elektromotoryczny z napędem elektrycznym, odpowiednie okablowanie. Dostępne tylko dla linii Termo Prestige Lux i Alu Hybrid, nie wymaga stosowania elektrozaczepów, w standardzie zasuwnica elektromotoryczna.",
         },
       ],
@@ -114,11 +114,11 @@ export default new Vuex.Store({
         {
           artnr: "12V",
           bez: "12V",
-          cena: 140,
+          cena: 150,/*  */
           opis: "Dedykowany dla rozwiązań z zamkiem Automatic dla linii Termo Prestige Lux (brak możliwość zastosowania przy wybraniu podświetlenia LED tj. podświetlane pochwyty, podświetlony próg lub intarsje LED w doświetlu)",
           // Montowany w puszkę elektryczną fi min.70 mm.
         },
-        { artnr: "24V", bez: "24V", cena: 180, opis: "Niezbędny dla zastosowaniu elektrozaczepu lub pochwytów z przyciskiem, podświetleniem lub czytnikiem linii papilarnych oraz dla wszystkich podświetleń LED" },
+        { artnr: "24V", bez: "24V", cena: 190, opis: "Niezbędny dla zastosowaniu elektrozaczepu lub pochwytów z przyciskiem, podświetleniem lub czytnikiem linii papilarnych oraz dla wszystkich podświetleń LED" },
         // Montowany w podwójną puszkę kieszeniową (w ofercie WIKĘD)
       ],
     },
@@ -133,7 +133,8 @@ export default new Vuex.Store({
     rozety: {
       dane: [
         { artnr: "SlimSoloX", bez: "Rozeta dolna do klamki PrimeSolo" },
-        { artnr: "RozPiersc", bez: "Rozeta pierścieniowa", cena: 380 },
+        { artnr: "RozPiersc", bez: "Rozeta pierścieniowa", cena: 210 },
+        // { artnr: "RozPiersc", bez: "Rozeta pierścieniowa", cena: 380 },
         { artnr: "LavaX", bez: "Rozeta dolna do klamki Lava" },
       ],
     },
@@ -303,9 +304,9 @@ export default new Vuex.Store({
     szyba2: {
       dane: [
         { artnr: "s", bez: "Standard (przezroczysta)" },
-        { artnr: "28", bez: "Skip Black 3D", cena: 730 },
-        { artnr: "29", bez: "Skip Black Lacobel", cena: 730 },
-        { artnr: "08", bez: "Skip Lustro", cena: 730 },
+        { artnr: "28", bez: "Skip Black 3D", cena: 770 },
+        { artnr: "29", bez: "Skip Black Lacobel", cena: 770 },
+        { artnr: "08", bez: "Skip Lustro", cena: 770 },
         { artnr: "p", bez: "Piaskowane według wzoru" },
         { artnr: "p2", bez: "Piaskowane według wzoru" },
         { artnr: "p3", bez: "Piaskowane według wzoru" },
@@ -322,11 +323,11 @@ export default new Vuex.Store({
         },
         { artnr: "c", bez: "Piaskowane w całości" },
         // { artnr: "bl", bez: "Black", cena: 500 },
-        { artnr: "bl", bez: "Black", cena: 790, cena2: 920 },
-        { artnr: "b", bez: "Glass Black", cena: 790, cena2: 920 },
-        { artnr: "g", bez: "Glass Lustro Weneckie", cena: 790, cena2: 930 },
-        { artnr: "w", bez: "Lustro Weneckie", cena: 250 },
-        { artnr: "a", bez: "Reflex Grafit", cena: 100 },
+        { artnr: "bl", bez: "Black", cena: 830, cena2: 970 },
+        { artnr: "b", bez: "Glass Black", cena: 830, cena2: 970 },
+        { artnr: "g", bez: "Glass Lustro Weneckie", cena: 830, cena2: 980 },
+        { artnr: "w", bez: "Lustro Weneckie", cena: 270 },
+        { artnr: "a", bez: "Reflex Grafit", cena: 110 },
         { artnr: "r", bez: "Reflex Brąz" },
         { artnr: "m", bez: "Mleczne" },
         { artnr: "n", bez: "Pełne" },
@@ -378,12 +379,12 @@ export default new Vuex.Store({
     samozamykacz: {
       dane: [
         { artnr: "-", bez: "Brak", cena: 0 },
-        { artnr: "AA", bez: "Samozamykacz nawierzchniowy z ramieniem PPOŻ", cena: 320 }, //263
-        { artnr: "LN", bez: "Listwowy nawierzchniowy", cena: 1050 + 100 }, //ok
-        { artnr: "LC", bez: "Listwowy chowany", cena: 1250 + 100 }, //ok
-        { artnr: "R", bez: "Z ramieniem", cena: 380 + 100 }, //ok
+        { artnr: "AA", bez: "Samozamykacz nawierzchniowy z ramieniem PPOŻ", cena: 400 }, //263
+        { artnr: "LN", bez: "Listwowy nawierzchniowy", cena: 1100 + 100 }, //ok
+        { artnr: "LC", bez: "Listwowy chowany", cena: 1320 + 100 }, //ok
+        { artnr: "R", bez: "Z ramieniem", cena: 400 + 100 }, //ok
         // { artnr: "RB", bez: "Z ramieniem i blokadą", cena: 570 + 100 }, //ok
-        { artnr: "W", bez: "Tylko wzmocnienie pod samozamykacz", cena: 100, opis: "Zalecane, gdy zdecydujesz się na późniejszy montaż samozamykacza" }, //ok
+        { artnr: "W", bez: "Tylko wzmocnienie pod samozamykacz", cena: 110, opis: "Zalecane, gdy zdecydujesz się na późniejszy montaż samozamykacza" }, //ok
       ],
     },
     kolorsam: {
@@ -406,16 +407,16 @@ export default new Vuex.Store({
       bez: "Kopniak",
       dane: [
         { artnr: "-", bez: "Brak", cena: 0 },
-        { artnr: "1", bez: "Wewnątrz", cena: 100 }, //84
-        { artnr: "2", bez: "Zewnątrz", cena: 100 }, //84
-        { artnr: "3", bez: "Obustronnie", cena: 250 }, //168
+        { artnr: "1", bez: "Wewnątrz", cena: 120 }, //84
+        { artnr: "2", bez: "Zewnątrz", cena: 120 }, //84
+        { artnr: "3", bez: "Obustronnie", cena: 240 }, //168
       ],
     },
     elektrozaczepOpcje: {
       dane: [
-        { artnr: "K", bez: "z kontaktronem", cena: 280, opis: "Zapewnia wyższą estetykę (brak montażu w ościeżnicy) oraz prostszy sposób połączenia z centralą." },
-        { artnr: "DN", bez: "z funkcją rolki/ dzień-noc", cena: 260, opis: "Napiecie znamionowe: 8-12V Wymagany samozamykacz w przypadku korzystania z funkcji rolki/dzień-noc" },
-        { artnr: "PDN", bez: "z pamięcią z funkcją/ dzień-noc", cena: 280, opis: "Urządzenie dedykowane dla inteligentnych systemów Wymagany samozamykacz w przypadku korzystania z finkcji rolki/dzień-noc" },
+        // { artnr: "K", bez: "z kontaktronem", cena: 280, opis: "Zapewnia wyższą estetykę (brak montażu w ościeżnicy) oraz prostszy sposób połączenia z centralą." },
+        { artnr: "DN", bez: "z funkcją rolki/ dzień-noc", cena: 280, opis: "Napiecie znamionowe: 8-12V Wymagany samozamykacz w przypadku korzystania z funkcji rolki/dzień-noc" },
+        { artnr: "PDN", bez: "z pamięcią z funkcją/ dzień-noc", cena: 300, opis: "Urządzenie dedykowane dla inteligentnych systemów Wymagany samozamykacz w przypadku korzystania z finkcji rolki/dzień-noc" },
       ],
     },
     elektrozaczep: {
@@ -461,7 +462,7 @@ export default new Vuex.Store({
         // { artnr: "B", bez: "Biometryczny" },
         // { artnr: "K", bez: "Kodowy" },
         // { artnr: "Z", bez: "Zbliżeniowy" },
-        { artnr: "M", bez: "Cytnik Multi Smart", cena: 2990 },
+        { artnr: "M", bez: "Cytnik Multi Smart", cena: 3140 },
       ],
     },
     typ: {
@@ -2394,19 +2395,22 @@ export default new Vuex.Store({
       let filtered = klamki.filter(
         (el) =>
           el.TYP.indexOf(sposobotw.substring(1, 2)) > -1 &&
-          el.SO.indexOf(so) > -1 &&
+          el.SO.indexOf(so) > -1 &&          
+          el.PRODUKTTYP.split(",").includes(seria)&&
           (el.WZORY.trim()
             .split(",")
-            .indexOf(wzor) > -1 ||
+            .includes(wzor) ||
+            // .indexOf(wzor) > -1 ||
             el.WZORY.indexOf("-") > -1)
       );
       let dostepne_okucia = klamki.filter(
         (el) =>
           (el.WZORY.trim()
             .split(",")
-            .indexOf(wzor) > -1 ||
+            .includes(wzor) ||
             el.WZORY.indexOf("-") > -1) &&
-          el.PRODUKTTYP.indexOf(seria) > -1
+          el.PRODUKTTYP.split(",").includes(seria)
+          // el.PRODUKTTYP.indexOf(seria) > -1
       );
       if (klamkakolor.length > 5) {
         klamkakolor = "10304";
@@ -2427,21 +2431,21 @@ export default new Vuex.Store({
       }
       if (sposobotw == "KP" || sposobotw == "PP") {
         const dlugosci = [];
-        console.table(filtered);
-        console.log(pochwyty);
-        console.log(klamkakolor);
+        // console.table(filtered);
+        // console.log(pochwyty);
+        // console.log(klamkakolor);
         filtered = filtered.filter((el) => el.GRUPA == pochwyty);
-        console.table(filtered);
+        // console.table(filtered);
         filtered = filtered.filter((el) => el.dlugosc == dlugoscip);
-        console.table(filtered);
+        // console.table(filtered);
         filtered = filtered.filter((el) => el.kat == kat);
-        console.table(filtered);
+        // console.table(filtered);
         filtered = filtered.filter((el) => el.opcjepochwytu == opcjepochwytu );
-        console.table(filtered);
+        // console.table(filtered);
         filtered = filtered.filter((el) => el.led == led);
-        console.table(filtered);
+        // console.table(filtered);
       }
-
+      console.table(filtered);
       return filtered.length > 0 ? filtered : [{ artnr: "-", bez: "Brak" }];
     },
 

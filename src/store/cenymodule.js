@@ -1,4 +1,5 @@
-import macierz from "./JSON/23031.json";
+// import macierz from "./JSON/23031.json";
+import macierz from "./JSON/24011.json";
 import bikolor_naswietla from "./JSON/bikolor_naswietla.json";
 import SAMOZAMYKACZ_CENA from "./JSON/SAMOZAMYKACZ_CENA.JSON";
 import bikolor_drzwi from "./JSON/bikolor_drzwi.json";
@@ -49,7 +50,7 @@ const ceny = {
     },
     EzaczeprCena: (state, getters, rootState) => {
       if (rootState.product.elektrozaczepr == "J") {
-        return 1540;
+        return 1620;
       } else {
         return 0;
       }
@@ -72,11 +73,11 @@ const ceny = {
       }
       // { "NUMMER": 23031, "PREISMATRIX": "DRZWI_DOP", "KLASSE1": "ROYAL_SZYB", "KLASSE2": "", "BREITE": 2, "HOEHE": 34, "PREIS": 1262, "PREIS2": 664 },
       if (rootState.product.szyba == "19" || rootState.product.baza == "19") {
-        return 250; //Lustro Weneckie
+        return 270; //Lustro Weneckie
       } else if (rootState.product.szyba == "20" || rootState.product.baza == "20") {
-        return 100; //Reflex Grafit
+        return 110; //Reflex Grafit
       } else if (rootState.product.szyba == "41") {
-        return 500; //Black
+        return 530; //Black
       } else {
         return 0;
       }
@@ -402,9 +403,9 @@ const ceny = {
       // if ([80, 81, 82, 83].includes(parseInt(rootState.product.seria))) {
       //   litera = "H";
       // }
-      let pole = 11; //pole 11,111
+      let pole = 111; //pole 11,111
       if (rootState.product.klamkakolor == "10304") {
-        pole = 12; //pole 12,112
+        pole = 112; //pole 12,112
         // console.log("Okucia BLACK");
       }
       // let ARTNR = rootState.product.klamka + litera;
@@ -423,17 +424,17 @@ const ceny = {
       var wkladka = 0;
       if (rootState.product.klamkakolor == "10304") {
         if (seriac == "20") {
-          wkladka = 110;
+          wkladka = 120;
         } else if (seriac == "30") {
-          wkladka = 130;
+          wkladka = 140;
         } else if (seriac == "41") {
-          wkladka = 150;
+          wkladka = 160;
         } else if (seriac == "661") {
           wkladka = 180;
         } else if (seria_protect == "60" || seria_protect == "70") {
-          wkladka = 130;
-        } else if (seria_protect == "65" || seria_protect == "75") {
-          wkladka = 360;
+          wkladka = 140;
+        } else if (["65","75","80","81","82","83"].includes(seria_protect)) {
+          wkladka = 380;
         } else {
           wkladka = 999;
         }
@@ -485,7 +486,7 @@ const ceny = {
 
       let pole = 11 + cyfra; //pole 11,111
       if (rootState.product.klamkakolor == "10304") {
-        pole = 12 + cyfra; //pole 12,112
+        pole = 112 + cyfra; //pole 12,112
         // console.log("Okucia BLACK");
       }
       let ARTNR = getters.activeKlamka.KOD + litera;
@@ -505,7 +506,7 @@ const ceny = {
       }
       // console.log("CenaPochwyt: " + output);
       if (rootState.product.klamkakolor == "10304") {
-        output = output + 110; // Dopłata za Czarną
+        output = output + 120; // Dopłata za Czarną
       }
 
       return output;
@@ -532,9 +533,9 @@ const ceny = {
       }
       let cyfra = 0;
 
-      let pole = 11 + cyfra; //pole 11,111
+      let pole = 111 + cyfra; //pole 11,111
       if (rootState.product.klamkakolor == "10304") {
-        pole = 12 + cyfra; //pole 12,112
+        pole = 112 + cyfra; //pole 12,112
       }
       let ARTNR = getters.activeKlamka.KOD + litera;
 
@@ -545,7 +546,10 @@ const ceny = {
       // console.log(seriac);
       // console.log(ARTNR);
       // console.log(pole);
+      // console.log(klamkiIpochwyty)
+      // console.log(klamkiIpochwyty.find((el) => el.ARTNR == ARTNR))
       // console.log(klamkiIpochwyty.find((el) => el.ARTNR == ARTNR && el.PREISFELDNR == pole))
+      // return 1;
       return klamkiIpochwyty.find((el) => el.ARTNR == ARTNR && el.PREISFELDNR == pole).WERT || 0;
     },
     DEERSTONE: (state, getters, rootState) => {
@@ -625,7 +629,7 @@ const ceny = {
     },
     CenaProgLed: (state, getters, rootState) => {
       if (rootState.product.progled) {
-        return 680;
+        return 720;
         // return 1;
       } else {
         return 0;
@@ -633,7 +637,7 @@ const ceny = {
     },
     CenaSmart: (state, getters, rootState) => {
       if (rootState.product.smart) {
-        return 569;
+        return 600;
         // return 1;
       } else {
         return 0;
@@ -641,7 +645,7 @@ const ceny = {
     },
     CenaPrzycZwal: (state, getters, rootState) => {
       if (rootState.product.klamka.indexOf("x") >= 0 && rootState.product.seria == "661") {
-        return rootState.product.klamkakolor == "10301" ? 260 : 280;
+        return rootState.product.klamkakolor == "10301" ? 280 : 300;
       } else {
         return 0;
       }
@@ -666,7 +670,7 @@ const ceny = {
     },
     CenaLamele: (state, getters, rootState) => {
       if (rootState.product.lamele == "J" && rootState.product.wzor == "01" && rootState.product.seria == "60" && rootState.product.kierunek.indexOf("w") >= 0) {
-        return 45 * rootState.product.lameleilosc;
+        return 50 * rootState.product.lameleilosc;
       } else {
         return 0;
       }
