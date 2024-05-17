@@ -984,8 +984,8 @@ export default {
       }
     },
     "product.seria": function(newval, val) {
-      console.log(this.product.kolor)
-      console.table(this.kolorFilter)
+      // console.log(this.product.kolor)
+      // console.table(this.kolorFilter)
       if(!this.kolorFilter.find((el)=>el.artnr==this.kolorFilter)){
         console.log('Brak koloru w filtrze kolorów')
         // this.product.kolor = this.kolorFilter[0].artnr
@@ -1201,7 +1201,7 @@ export default {
     "product.kolor7typ": function() {},
     "product.kolor": function(newval, val) {
       let kolor = newval;
-      console.log(newval)
+      // console.log(newval)
       if (this.product.wariant == "S") {
             this.product.kolor2 = kolor;
             this.product.kolor5 = kolor;

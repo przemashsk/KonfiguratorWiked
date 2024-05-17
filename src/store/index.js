@@ -114,7 +114,7 @@ export default new Vuex.Store({
         {
           artnr: "12V",
           bez: "12V",
-          cena: 150,/*  */
+          cena: 150 /*  */,
           opis: "Dedykowany dla rozwiązań z zamkiem Automatic dla linii Termo Prestige Lux (brak możliwość zastosowania przy wybraniu podświetlenia LED tj. podświetlane pochwyty, podświetlony próg lub intarsje LED w doświetlu)",
           // Montowany w puszkę elektryczną fi min.70 mm.
         },
@@ -2382,6 +2382,7 @@ export default new Vuex.Store({
       let sposobotw = state.product.sposobotw;
       let wzor = state.product.wzor;
       let klamkakolor = state.product.klamkakolor;
+      // console.log(klamkakolor);
       let pochwyty = state.product.pochwyty;
       let opcjepochwytu = state.product.opcjepochwytu;
       let led = state.product.led;
@@ -2395,8 +2396,9 @@ export default new Vuex.Store({
       let filtered = klamki.filter(
         (el) =>
           el.TYP.indexOf(sposobotw.substring(1, 2)) > -1 &&
-          el.SO.indexOf(so) > -1 &&          
-          el.PRODUKTTYP.split(",").includes(seria)&&
+          el.SO.indexOf(so) > -1 &&
+          el.PRODUKTTYP.split(",").includes(seria) &&
+          el.KOLORY_KLAMEK.split(",").includes(klamkakolor) &&
           (el.WZORY.trim()
             .split(",")
             .includes(wzor) ||
@@ -2409,8 +2411,9 @@ export default new Vuex.Store({
             .split(",")
             .includes(wzor) ||
             el.WZORY.indexOf("-") > -1) &&
-          el.PRODUKTTYP.split(",").includes(seria)
-          // el.PRODUKTTYP.indexOf(seria) > -1
+          el.PRODUKTTYP.split(",").includes(seria) &&
+          el.KOLORY_KLAMEK.split(",").includes(klamkakolor)
+        // el.PRODUKTTYP.indexOf(seria) > -1
       );
       if (klamkakolor.length > 5) {
         klamkakolor = "10304";
@@ -2440,12 +2443,12 @@ export default new Vuex.Store({
         // console.table(filtered);
         filtered = filtered.filter((el) => el.kat == kat);
         // console.table(filtered);
-        filtered = filtered.filter((el) => el.opcjepochwytu == opcjepochwytu );
+        filtered = filtered.filter((el) => el.opcjepochwytu == opcjepochwytu);
         // console.table(filtered);
         filtered = filtered.filter((el) => el.led == led);
         // console.table(filtered);
       }
-      console.table(filtered);
+      // console.table(filtered);
       return filtered.length > 0 ? filtered : [{ artnr: "-", bez: "Brak" }];
     },
 

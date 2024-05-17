@@ -1164,7 +1164,7 @@ export default {
         this.tloczenieimage = imageObj;
       };
 
-      console.log(imageObj.src);
+      // console.log(imageObj.src);
     },
 
     drawAutomatyka: function () {

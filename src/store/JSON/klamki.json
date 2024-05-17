@@ -59,34 +59,19 @@
     "KOD": "Dublin"
   },
   {
-    "artnr": "KingA",
+    "artnr": "King",
     "bez": "Klamka King ",
     "SO": "Z,W",
     "TYP": "K",
     "WZORY": ",RL1,RL2,RL2,RL2A,RL2B,RL3,RL3A,RL3B,RL4,RL4A,RL4B,RL5,RL5A,RL5B,RL6,RL6A,RL7,RL7A,RL7B,",
     "ZABLOKOWANE": "-",
-    "PRODUKTTYP": "20,21,22,23,30,31,32,",
-    "KOLORY_KLAMEK": "10301,10302,10304",
+    "PRODUKTTYP": "20,21,22,23,30,31,32,41,",
+    "KOLORY_KLAMEK": "10304",
     "GRUPA": "-",
     "kat": 90,
     "led": "-",
     "opcjepochwytu": "-",
-    "KOD": "KingA"
-  },
-  {
-    "artnr": "KingB",
-    "bez": "Klamka King ",
-    "SO": "Z,W",
-    "TYP": "K",
-    "WZORY": ",RL1,RL2,RL2,RL2A,RL2B,RL3,RL3A,RL3B,RL4,RL4A,RL4B,RL5,RL5A,RL5B,RL6,RL6A,RL7,RL7A,RL7B,",
-    "ZABLOKOWANE": "-",
-    "PRODUKTTYP": "41,",
-    "KOLORY_KLAMEK": "10301,10302,10304",
-    "GRUPA": "-",
-    "kat": 90,
-    "led": "-",
-    "opcjepochwytu": "-",
-    "KOD": "KingB"
+    "KOD": "King"
   },
   {
     "artnr": "Lava",
