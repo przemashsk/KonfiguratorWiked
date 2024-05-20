@@ -484,7 +484,7 @@ const ceny = {
       // }
       // console.log(rootState.promocja)
 
-      let pole = 11 + cyfra; //pole 11,111
+      let pole = 111 + cyfra; //pole 11,111
       if (rootState.product.klamkakolor == "10304") {
         pole = 112 + cyfra; //pole 12,112
         // console.log("Okucia BLACK");

@@ -69,7 +69,7 @@ export default new Vuex.Store({
         { artnr: "STRIPE", bez: "STRIPE" },
         { artnr: "SPACE DECOR", bez: "SPACE DECOR" },
         { artnr: "SPACE RAL", bez: "SPACE RAL" },
-        { artnr: "SPACE DEERSTONE", bez: "SPACE DEERSTONE" },
+        // { artnr: "SPACE DEERSTONE", bez: "SPACE DEERSTONE" },
         { artnr: "SPACE LACOBEL", bez: "SPACE LACOBEL" },
         { artnr: "SLIM SPACE LACOBEL", bez: "SLIM SPACE LACOBEL" },
         { artnr: "SLIM SPACE ŻYWICA", bez: "SLIM SPACE 2" },
