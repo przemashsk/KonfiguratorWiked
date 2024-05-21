@@ -2079,10 +2079,15 @@ export default new Vuex.Store({
     },
     sposobotwfilter: (state, getters) => {
       const seria = parseInt(state.product.seria);
+      let wzor = state.product.wzor;
+      let sposobotw = state.sposobotw.dane;
+      if (wzor == "GF6") {
+        sposobotw = sposobotw.filter((el) => ["PP", "KP", "PP"].includes(el.artnr));
+      }
+
       if (seria == 23) {
         return state.sposobotw.dane.filter((el) => el.artnr == "KK");
       }
-      let wzor = state.product.wzor;
       let dostepne_okucia = klamki.filter(
         (el) =>
           (el.WZORY.trim()
@@ -2100,7 +2105,7 @@ export default new Vuex.Store({
       // console.log(uniquesposobyWew);
 
       // console.log(state.sposobotw.dane.filter((el) => uniquesposobyWew.includes(el.artnr.substr(0, 1)) && uniquesposobyZew.includes(el.artnr.substr(1, 1))));
-      return state.sposobotw.dane.filter((el) => uniquesposobyWew.includes(el.artnr.substr(0, 1)) && uniquesposobyZew.includes(el.artnr.substr(1, 1)));
+      return sposobotw.filter((el) => uniquesposobyWew.includes(el.artnr.substr(0, 1)) && uniquesposobyZew.includes(el.artnr.substr(1, 1)));
       // console.log(dostepne_okucia)
 
       // console.log(getters.klamkifilter2);
